@@ -4,31 +4,109 @@
     <meta charset="UTF-8">
     <title>Post-Silicon Steps of VLSI</title>
     <style>
+        /* Basic Reset */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f6f9;
+            color: #333;
         }
+
+        /* Header */
         header {
-            background-color: #881688;
+            background-color: #1f3c88;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
+
+        /* Animation for header */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Section Styling */
         section {
             padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1.5s ease-out;
         }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         h2 {
             color: #1f3c88;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .step {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .step img {
+            max-width: 40%;
+            margin-right: 20px;
+            border-radius: 8px;
+            animation: scaleIn 1s ease-in-out;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Footer */
         footer {
-            background-color: #881688;
+            background-color: #1f3c88;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             position: relative;
             bottom: 0;
             width: 100%;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .step img {
+                max-width: 80%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -36,24 +114,45 @@
 
 <header>
     <h1>Post-Silicon Steps in VLSI Design</h1>
-    <p>Understanding the Process After Chip Fabrication-by TANVI BHANDARI-Scientist-B</p>
+    <p>Understanding the Process After Chip Fabrication</p>
 </header>
 
 <section>
-    <h2>1. Wafer Testing</h2>
-    <p>Each fabricated wafer undergoes electrical testing to identify functional and defective dies before packaging.</p>
+    <div class="step">
+        <img src="https://share.google/vvyDEwPukYrgjRw5Y/300x200" alt="Wafer Testing">
+        <div>
+            <h2>1. Wafer Testing</h2>
+            <p>Each fabricated wafer undergoes electrical testing to identify functional and defective dies before packaging. This ensures that only fully functional chips are sent for the next stages.</p>
+        </div>
+    </div>
 
-    <h2>2. Packaging</h2>
-    <p>The verified dies are packaged to protect the chip and provide electrical connections to external systems.</p>
+    <div class="step">
+        <div>
+            <h2>2. Packaging</h2>
+            <p>The verified dies are packaged to protect the chip and provide electrical connections to external systems. The packaging ensures thermal management and mechanical protection of the chip.</p>
+        </div>
+    </div>
 
-    <h2>3. Post-Silicon Validation</h2>
-    <p>Chips are tested in real hardware environments to validate performance, functionality, and reliability.</p>
+    <div class="step">
+        <div>
+            <h2>3. Post-Silicon Validation</h2>
+            <p>Chips are tested in real hardware environments to validate performance, functionality, and reliability. These tests help ensure that the chip performs as expected in real-world conditions.</p>
+        </div>
+    </div>
 
-    <h2>4. Failure Analysis</h2>
-    <p>Any defects found during validation are analyzed to improve yield and future chip revisions.</p>
+    <div class="step">
+        <div>
+            <h2>4. Failure Analysis</h2>
+            <p>If defects are detected during validation, detailed failure analysis is performed to understand the root causes and to improve future manufacturing processes.</p>
+        </div>
+    </div>
 
-    <h2>5. Product Qualification</h2>
-    <p>The final chips undergo reliability and stress testing before being released to the market.</p>
+    <div class="step">
+        <div>
+            <h2>5. Product Qualification</h2>
+            <p>Final chips undergo rigorous reliability and stress testing to confirm they can endure operational conditions over time before they are released to the market for commercial use.</p>
+        </div>
+    </div>
 </section>
 
 <footer>
